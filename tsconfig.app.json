@@ -7,6 +7,17 @@
     "module": "ESNext",
     "types": ["vite/client"],
     "skipLibCheck": true,
+    "paths": {
+      "@core/*": ["./src/features/core/*"],
+      "@common/*": ["./src/shared/common/*"],
+      "@components/*": ["./src/shared/components/*"],
+      "@hooks/*": ["./src/shared/hooks/*"],
+      "@routes/*": ["./src/routes/*"],
+
+      /* Features */
+      "@counter/*": ["./src/features/counter/*"],
+      "@stopwatch/*": ["./src/features/stopwatch/*"],
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
