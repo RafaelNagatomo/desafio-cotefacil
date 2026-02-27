@@ -1,9 +1,10 @@
 import { Navigate, RouteObject } from "react-router-dom"
 import { Constants } from "@common/constants"
+import { AppLayout } from "@components/index"
 
 export const AppRoutes: RouteObject = {
   path: "/app",
-  // element: <AppLayout />,
+  element: <AppLayout />,
   children: [
     {
       path: "*",
