@@ -8,7 +8,7 @@
     "types": ["vite/client"],
     "skipLibCheck": true,
     "paths": {
-      "@core/*": ["./src/features/core/*"],
+      "@core/*": ["./src/core/*"],
       "@routes/*": ["./src/routes/*"],
       "@common/*": ["./src/shared/common/*"],
       "@components/*": ["./src/shared/components/*"],
