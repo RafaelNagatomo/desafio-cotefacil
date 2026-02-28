@@ -9,10 +9,11 @@
     "skipLibCheck": true,
     "paths": {
       "@core/*": ["./src/features/core/*"],
+      "@routes/*": ["./src/routes/*"],
       "@common/*": ["./src/shared/common/*"],
       "@components/*": ["./src/shared/components/*"],
       "@hooks/*": ["./src/shared/hooks/*"],
-      "@routes/*": ["./src/routes/*"],
+      "@theme/*": ["./src/theme/*"],
 
       /* Features */
       "@counter/*": ["./src/features/counter/*"],
@@ -31,9 +32,18 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
+    "erasableSyntaxOnly": false,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "typeRoots": [
+    "src/__override/@types",
+    "./node_modules/@types"
+  ],
+  "include": [
+    "src",
+    "src/main.tsx",
+    "src/**/*.tsx",
+    "src/**/*.ts",
+  ]
 }
