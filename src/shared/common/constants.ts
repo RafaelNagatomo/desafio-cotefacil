@@ -3,14 +3,14 @@ const APP_URL = "/app"
 const API_URL = "/api"
 
 export const Constants = Object.freeze({
-  auth: {},
+    auth: {},
 
-  app: {
-    COUNTER: APP_URL.concat("/counter"),
-    STOPWATCH: APP_URL.concat("/stopwatch"),
+    app: {
+        COUNTER: APP_URL.concat("/counter"),
+        STOPWATCH: APP_URL.concat("/stopwatch"),
 
-    NOT_FOUND: APP_URL.concat("/not-found"),
-  },
+        NOT_FOUND: APP_URL.concat("/not-found"),
+    },
 
-  api: {},
+    api: {},
 })
