@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { createTheme, Theme, ThemeOptions } from "@mui/material";
 import { PaletteSchema } from "./interfaces";
-import { colorSchema, fontSystem, radius, spacing } from "./tokens";
+import { boxShadow, colorSchema, fontSystem, radius, spacing } from "./tokens";
 import { LightPalette } from "./palettes";
 
 export class ThemeFactory {
@@ -29,6 +29,7 @@ export class ThemeFactory {
             typography: fontSystem,
             customSpacing: spacing,
             radius,
+            boxShadow,
         });
 
         return theme;

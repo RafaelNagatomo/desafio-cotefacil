@@ -1,4 +1,4 @@
-import { colorSchema, radius, spacing } from "@theme/core/tokens";
+import { boxShadow, colorSchema, radius, spacing } from "@theme/core/tokens";
 import { lightPalette as palette } from "@theme/core/palettes";
 
 declare module "@mui/material/styles" {
@@ -7,6 +7,7 @@ declare module "@mui/material/styles" {
         colors: typeof colorSchema;
         customSpacing: typeof spacing;
         radius: typeof radius;
+        boxShadow: typeof boxShadow;
     }
 
     interface ThemeOptions {
@@ -14,5 +15,6 @@ declare module "@mui/material/styles" {
         colors?: typeof colorSchema;
         customSpacing?: typeof spacing;
         radius?: typeof radius;
+        boxShadow?: typeof boxShadow;
     }
 }
