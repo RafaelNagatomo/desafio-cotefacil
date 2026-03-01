@@ -16,7 +16,7 @@ export function useController<T extends BaseController>(
 
     const controller = useMemo(() => {
         return new ControllerClass(navigate, dispatch)
-    }, [navigate, dispatch]);
+    }, [ControllerClass]);
 
     useEffect(() => {
         controller.init();

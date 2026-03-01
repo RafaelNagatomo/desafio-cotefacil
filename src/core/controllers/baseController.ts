@@ -13,10 +13,13 @@ export abstract class BaseController implements IController {
     ) {
         this._navigate = navigate;
         this._dispatch = dispatch;
+
+        this.registerEventBind();
     }
 
     abstract init(): void;
     abstract dispose(): void;
+    protected registerEventBind(): void {}
 
     protected updateGlobalState(action: UnknownAction): void {
         this._dispatch(action);
