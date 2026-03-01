@@ -16,6 +16,7 @@
       "@theme/*": ["./src/theme/*"],
 
       /* Features */
+      "@clock/*": ["./src/features/clock/*"],
       "@counter/*": ["./src/features/counter/*"],
       "@stopwatch/*": ["./src/features/stopwatch/*"],
     },
