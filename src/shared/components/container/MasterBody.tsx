@@ -8,8 +8,11 @@ const paddingBody = {
 };
 
 const ElasticContainer = styled(Box)(() => ({
+    display: 'flex',
     flex: '1',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    justifyContent: 'center',
+    alignItems: 'center',
 }));
 
 export const MasterBody = (props: GridProps) => {
