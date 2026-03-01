@@ -8,6 +8,7 @@ export const Constants = Object.freeze({
     app: {
         COUNTER: APP_URL.concat("/counter"),
         STOPWATCH: APP_URL.concat("/stopwatch"),
+        CLOCK: APP_URL.concat("/clock"),
 
         NOT_FOUND: APP_URL.concat("/not-found"),
     },

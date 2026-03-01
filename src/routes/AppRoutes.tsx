@@ -1,7 +1,7 @@
 import { Navigate, RouteObject } from "react-router-dom"
 import { Constants } from "@common/constants"
 import { AppLayout } from "@components/index"
-import { CounterPage } from "@counter/pages"
+import { CounterPage } from "@counter/index"
 
 export const AppRoutes: RouteObject = {
     path: "/app",
@@ -15,9 +15,13 @@ export const AppRoutes: RouteObject = {
             path: "counter",
             element: <CounterPage />,
         },
-        // {
-        //     path: "stopwatch",
-        //     element: <DashboardPage />,
-        // },
+        {
+            path: "stopwatch",
+            element: <CounterPage />,
+        },
+        {
+            path: "clock",
+            element: <CounterPage />,
+        },
     ]
 }

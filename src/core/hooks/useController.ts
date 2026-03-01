@@ -1,20 +1,30 @@
 import { useEffect, useMemo } from 'react';
 import { useDispatch } from 'react-redux';
-import { BaseController } from '@core/controllers/baseController';
+import { Dispatch, UnknownAction } from '@reduxjs/toolkit';
+
+import { Navigator, useNavigation } from '@common/navigation';
+import { BaseController } from '@core/index';
 
 export function useController<T extends BaseController>(
-  ControllerClass: new (dispatch: any) => T
+    ControllerClass: new (
+        navigate: Navigator,
+        dispatch: Dispatch<UnknownAction>
+    ) => T
 ): T {
-  const dispatch = useDispatch();
-  const controller = useMemo(() => new ControllerClass(dispatch), [dispatch]);
+    const navigate = useNavigation();
+    const dispatch = useDispatch();
 
-  useEffect(() => {
-    controller.init();
+    const controller = useMemo(() => {
+        return new ControllerClass(navigate, dispatch)
+    }, [navigate, dispatch]);
 
-    return () => {
-      controller.dispose();
-    };
-  }, [controller]);
+    useEffect(() => {
+        controller.init();
 
-  return controller;
+        return () => {
+            controller.dispose();
+        };
+    }, [controller]);
+
+    return controller;
 }
