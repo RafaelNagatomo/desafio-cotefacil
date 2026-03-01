@@ -1,13 +1,14 @@
+import { Dispatch, UnknownAction } from '@reduxjs/toolkit';
 import { BaseController } from '@core/index';
 import { CounterService, setValue } from '@counter/index';
 import { Navigator } from '@common/navigation';
 
 export class CounterController extends BaseController {
-    private service: CounterService;
+    protected service: CounterService;
 
     constructor(
         navigate: Navigator,
-        dispatch: any
+        dispatch: Dispatch<UnknownAction>,
     ) {
         super(navigate, dispatch);
         this.service = new CounterService();

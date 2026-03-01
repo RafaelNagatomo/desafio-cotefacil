@@ -1,18 +1,19 @@
 import { Typography, Box } from "@mui/material";
 import { CounterController } from "@counter/index";
 
-interface CounterProps {
+interface DisplayProps {
     controller: CounterController;
     count: number;
 }
 
-export const Display = (props: CounterProps) => {
+export const Display = (props: DisplayProps) => {
     const { controller, count } = props;
 
     return (
         <Box className="relative">
             <Typography
                 variant="h1"
+                className="drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]"
                 sx={{
                     color: (theme) => controller?.evenNumber(count)
                     ? theme?.palette?.information?.default

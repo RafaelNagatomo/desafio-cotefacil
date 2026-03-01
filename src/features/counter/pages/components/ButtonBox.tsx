@@ -2,12 +2,12 @@ import { Box } from "@mui/material";
 import { ActionButton, ActionButtonType, NewIcon, RefreshIcon } from "@components/button";
 import { CounterController } from "@counter/index";
 
-interface CounterProps {
+interface ButtonBoxProps {
     controller: CounterController;
     count: number;
 }
 
-export const ButtonBox = (props: CounterProps) => {
+export const ButtonBox = (props: ButtonBoxProps) => {
     const { controller, count } = props;
 
     return (
