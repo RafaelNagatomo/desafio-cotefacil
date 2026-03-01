@@ -1,18 +1,21 @@
-import { Button, useTheme } from "@mui/material";
+import { Box } from "@mui/material";
+import { AppWindow } from "@components/appWindow";
+import { useController, useAppSelector } from "@core/index";
+import { CounterController } from "@counter/index";
+
+import { Display } from "./components/Display";
+import { ButtonBox } from "./components/ButtonBox";
 
 export const CounterPage = () => {
-    const theme = useTheme();
+    const controller = useController(CounterController);
+    const count = useAppSelector((state) => state.counter.value);
 
     return (
-        <Button
-            variant="contained"
-            sx={{
-                padding: theme?.customSpacing?.s,
-                borderRadius: theme?.radius.l,
-                backgroundColor: theme?.palette?.secondary?.default,
-            }}
-        >
-            Contained
-        </Button>
-    )
-}
+        <AppWindow>
+            <Box className="flex flex-col items-center gap-8">
+                <Display controller={controller} count={count} />
+                <ButtonBox controller={controller} count={count} />
+            </Box>
+        </AppWindow>
+    );
+};

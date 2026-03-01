@@ -1,4 +1,4 @@
-import { Button, ButtonProps, styled, SxProps, Theme } from '@mui/material'
+import { Button, ButtonProps, IconButton, styled, SxProps, Theme, Tooltip } from '@mui/material'
 
 export const BaseButton = styled(Button)(({ theme }) => ({
     paddingTop: theme?.customSpacing?.xs,
@@ -36,7 +36,7 @@ export enum ActionButtonType {
     TEXT = 'TEXT',
     OUTLINED = 'OUTLINED',
     CONTAINED = 'CONTAINED',
-    ROUND = 'ROUND',
+    ROUNDED = 'ROUNDED',
 }
 
 export interface ActionButtonProps extends ButtonProps {
@@ -106,5 +106,51 @@ export const OutlinedButton = (props: ActionButtonProps) => {
         >
             {label}
         </BaseButton>
+    )
+}
+
+export const RoundedButton = (props: ActionButtonProps) => {
+    const { icon, label, disabled, onClick, sx, ...others } = props;
+
+    return (
+        <Tooltip title={label}>
+            <IconButton
+                disableFocusRipple
+                size="large"
+                onClick={onClick}
+                sx={(theme: Theme) => ({
+                    backgroundColor: theme?.palette?.surface?.default,
+                    color: theme?.palette?.surface?.inverse,
+
+                    "&:hover": {
+                        backgroundColor: theme?.palette?.surface?.hover,
+                    },
+
+                    "&:disabled": {
+                        backgroundColor: theme?.palette?.surface?.default,
+                        color: theme?.palette?.surface?.main,
+                        cursor: "not-allowed",
+                        border: "none",
+                        pointerEvents: "none",
+                    },
+
+                    "&.Mui-focusVisible::after": {
+                        content: '""',
+                        position: "absolute",
+                        top: "-4px",
+                        left: "-4px",
+                        right: "-4px",
+                        bottom: "-4px",
+                        border: `2px solid ${theme?.palette?.focus}`,
+                        borderRadius: `${theme?.radius?.circle}`,
+                    },
+                    
+                    sx,
+                })}
+                {...others}
+            >
+                {icon}
+            </IconButton>
+        </Tooltip>
     )
 }

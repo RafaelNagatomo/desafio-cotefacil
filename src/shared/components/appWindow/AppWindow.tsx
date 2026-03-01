@@ -1,4 +1,4 @@
-import { Box, Divider, Paper, PaperProps, styled, useTheme } from "@mui/material"
+import { Box, Divider, Paper, PaperProps, styled } from "@mui/material"
 import { AppWindowHeader } from "./AppWindowHeader";
 import { AppWindowFooter } from "./AppWindowFooter";
 import { AppWindowMenu } from "./AppWindowMenu";
@@ -14,22 +14,22 @@ const WindowPaper = styled(Paper)(({ theme }) => ({
 
 const ElasticContainer = styled(Box)(({ theme }) => ({
     flex: '1',
+    alignContent: 'center',
     overflow: 'hidden',
     backgroundColor: theme?.palette?.surface?.onInverse,
 }));
 
 export const AppWindow = (props: PaperProps) => {
     const { children, ...others } = props;
-    const theme = useTheme();
 
     return (
         <WindowPaper elevation={3} {...others}>
             <AppWindowHeader />
             <Divider
-                sx={{
+                sx={(theme) => ({
                     borderBottomWidth: 2,
                     borderColor: theme?.palette?.fixed?.dark,
-                }}
+                })}
             />
 
             <AppWindowMenu />

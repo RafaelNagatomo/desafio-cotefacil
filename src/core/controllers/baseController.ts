@@ -23,13 +23,13 @@ export abstract class BaseController implements IController {
     }
 
     public getPath(): string {
-        return this._navigate.getCurrentPath();
+        const path = this._navigate.getCurrentPath();
+        return path.substring(path.lastIndexOf("/") + 1);
     }
 
     public menuDisable(label: string): boolean {
         const path = this.getPath();
-        const result = path.substring(path.lastIndexOf("/") + 1);
-        return result === label;
+        return path === label;
     }
 
     public toCounter(): void {
