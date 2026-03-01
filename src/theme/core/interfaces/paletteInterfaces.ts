@@ -21,7 +21,7 @@ export interface BrandPalette {
     onMuted?: string;
     inverse?: string;
     onInverse?: string;
-    outline?: string;
+    hover?: string;
 }
 
 export interface PaletteSchema {

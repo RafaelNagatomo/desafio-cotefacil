@@ -13,7 +13,7 @@ export const LightPalette = (tokens: ColorSchema): PaletteSchema => {
             onMuted: c.brand.primary[500],
             inverse: c.brand.primary[100],
             onInverse: c.brand.primary[600],
-            outline: c.brand.primary[200],
+            hover: c.brand.primary[200],
         },
 
         secondary: {
@@ -24,7 +24,7 @@ export const LightPalette = (tokens: ColorSchema): PaletteSchema => {
             onMuted: c.brand.secondary[500],
             inverse: c.brand.secondary[100],
             onInverse: c.brand.secondary[600],
-            outline: c.brand.secondary[200],
+            hover: c.brand.secondary[200],
         },
 
         surface: {
@@ -35,7 +35,7 @@ export const LightPalette = (tokens: ColorSchema): PaletteSchema => {
             onMuted: c.neutral.grey[500],
             inverse: c.neutral.grey[100],
             onInverse: c.neutral.grey[600],
-            outline: c.neutral.grey[200],
+            hover: c.neutral.grey[200],
         },
 
         danger: {
@@ -46,7 +46,7 @@ export const LightPalette = (tokens: ColorSchema): PaletteSchema => {
             onMuted: c.feedback.danger[500],
             inverse: c.feedback.danger[100],
             onInverse: c.feedback.danger[600],
-            outline: c.feedback.danger[200],
+            hover: c.feedback.danger[200],
         },
 
         warning: {
@@ -57,7 +57,7 @@ export const LightPalette = (tokens: ColorSchema): PaletteSchema => {
             onMuted: c.feedback.warning[500],
             inverse: c.feedback.warning[100],
             onInverse: c.feedback.warning[600],
-            outline: c.feedback.warning[200],
+            hover: c.feedback.warning[200],
         },
 
         success: {
@@ -68,7 +68,7 @@ export const LightPalette = (tokens: ColorSchema): PaletteSchema => {
             onMuted: c.feedback.success[500],
             inverse: c.feedback.success[100],
             onInverse: c.feedback.success[600],
-            outline: c.feedback.success[200],
+            hover: c.feedback.success[200],
         },
 
         information: {
@@ -79,7 +79,7 @@ export const LightPalette = (tokens: ColorSchema): PaletteSchema => {
             onMuted: c.feedback.information[500],
             inverse: c.feedback.information[100],
             onInverse: c.feedback.information[600],
-            outline: c.feedback.information[200],
+            hover: c.feedback.information[200],
         },
 
         disabled: {

@@ -27,7 +27,7 @@ export const colorSchema: ColorSchema = {
         grey: {
             50: "#FAFAFA",
             100: "#F1F1F1",
-            200: "#D6DADE",
+            200: "#7f848a",
             300: "#687078",
             400: "#373F47",
             500: "#2A2D31",
