@@ -55,7 +55,8 @@ export const ButtonBox = (props: ButtonBoxProps) => {
 
                 <Typography
                     variant="caption"
-                    className="uppercase tracking-widest font-bold"
+                    fontWeight="bold"
+                    className="uppercase tracking-widest"
                     sx={{ color: (theme) => theme?.palette?.surface?.textPrimary }}
                 >
                     {isRunning ? "Sistema em andamento" : "Sistema pausado"}

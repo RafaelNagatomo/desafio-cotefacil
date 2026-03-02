@@ -16,6 +16,9 @@ import { FaPlay as PlayIcon } from "react-icons/fa";
 import { FaPause as PauseIcon } from "react-icons/fa";
 import { FaCheck as CheckIcon } from "react-icons/fa";
 import { RiBrushAiLine as BrushLineIcon } from "react-icons/ri";
+import { FaPlus as PlusIcom } from "react-icons/fa6";
+import { HiOutlineBookOpen as BookOpenIcon } from "react-icons/hi";
+import { FiMaximize2 as MaximizeIcon } from "react-icons/fi";
 
 export {
     NewIcon,
@@ -27,6 +30,9 @@ export {
     PauseIcon,
     CheckIcon,
     BrushLineIcon,
+    PlusIcom,
+    MaximizeIcon,
+    BookOpenIcon,
 };
 
 export const ActionButton = (props: ActionButtonProps) => {

@@ -1,4 +1,4 @@
-import { Avatar, Box, Divider, useTheme } from "@mui/material"
+import { Avatar, Box, Divider, Typography, useTheme } from "@mui/material"
 import { BrushLineIcon, SelectIcon } from "@components/index";
 import { PaletteMode } from "@enum/index";
 import { ApplicationController, useAppSelector, useController } from "@core/index";
@@ -16,10 +16,19 @@ export const Header = () => {
             justifyContent="space-between"
             width="100%"
             paddingY={theme?.customSpacing?.s}
-            paddingX={theme?.customSpacing?.m}
+            paddingX={theme?.customSpacing?.l}
         >
             <Box>
-                {/* <Logo /> */}
+                <Typography
+                    variant="h5"
+                    color={theme?.palette?.primary?.main}
+                    sx={{ 
+                        fontFamily: '"JetBrains Mono", monospace',
+                        fontWeight: 'bold',
+                    }}
+                >
+                    StopwatchCounter
+                </Typography>
             </Box>
 
             <Box

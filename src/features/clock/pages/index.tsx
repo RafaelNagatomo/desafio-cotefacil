@@ -12,7 +12,7 @@ export const ClockPage: React.FC = () => {
             <Box className="flex flex-col items-center gap-6">
                 <Typography
                     variant="h5"
-                    className="font-bold"
+                    fontWeight="bold"
                     sx={{ color: (theme) => theme?.palette?.surface?.textPrimary }}
                 >
                     Hora atual do sistema
