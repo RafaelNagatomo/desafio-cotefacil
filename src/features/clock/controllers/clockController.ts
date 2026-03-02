@@ -1,5 +1,5 @@
-import { setTime } from "@clock/store/clockSlice";
 import { BaseController } from "@core/index";
+import { setTime } from "@clock/index";
 
 export class ClockController extends BaseController {
     private timerId: number | null = null;

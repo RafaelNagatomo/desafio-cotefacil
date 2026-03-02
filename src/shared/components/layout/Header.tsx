@@ -1,8 +1,8 @@
 import { Avatar, Box, Divider, useTheme } from "@mui/material"
 import { deepPurple } from "@mui/material/colors";
 import { BrushLineIcon, SelectIcon } from "@components/index";
+import { PaletteMode } from "@enum/index";
 import { ApplicationController, useAppSelector, useController } from "@core/index";
-import { PaletteMode } from "@theme/core/interfaces";
 
 export const Header = () => {
     const theme = useTheme();

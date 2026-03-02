@@ -4,7 +4,7 @@ import {
     OutlinedInput,
     MenuItem,
     FormControl,
-    Select as MuiSelect
+    Select as MuiSelect,
 } from "@mui/material";
 import { styled, SxProps } from "@mui/material/styles";
 import { CheckIcon } from "@components/index";

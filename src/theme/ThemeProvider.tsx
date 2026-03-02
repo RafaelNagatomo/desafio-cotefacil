@@ -1,9 +1,9 @@
 import { ThemeProvider as MuiThemeProvider, CssBaseline, } from "@mui/material";
 import { createTheme, ThemeOptions } from "@mui/material/styles";
-import { CounterTheme } from "./modules/counter";
 import { Brand, PaletteMode } from "@enum/index";
+import { CounterTheme } from "./modules";
 
-interface ThemeProviderProps {
+export interface ThemeProviderProps {
     brand: Brand;
     mode: PaletteMode;
     children: React.ReactNode;

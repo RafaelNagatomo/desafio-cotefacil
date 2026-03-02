@@ -1,8 +1,8 @@
 import { BrowserRouter } from "react-router-dom";
 import { Provider as ReduxProvider } from "react-redux";
+import { store, useAppSelector } from "@core/index";
 import { MainRoutes } from "@routes/index";
 import { ThemeProvider } from "@theme/index";
-import { store, useAppSelector } from "@core/index";
 
 
 function ApplicationRegister() {
