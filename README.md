@@ -107,6 +107,6 @@ npm run dev
 
 ## Screenshots
 
-![alt text](<Captura de tela 2026-03-02 120321.png>)
+![Screenshot preview light mode](./assets/preview_light.png)
 
-![alt text](<Captura de tela 2026-03-02 120353.png>)
+![Screenshot preview dark mode](./assets/preview_dark.png)
