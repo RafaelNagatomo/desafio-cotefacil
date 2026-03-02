@@ -1,7 +1,7 @@
-import { BaseController } from "@core/index";
+import { ApplicationController } from "@core/index";
 import { setTime } from "@clock/index";
 
-export class ClockController extends BaseController {
+export class ClockController extends ApplicationController {
     private timerId: number | null = null;
     private readonly ONE_SECOND = 1000;
 

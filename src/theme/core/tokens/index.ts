@@ -1,5 +1,6 @@
 export * from "./boxShadow";
-export * from "./colorSchema";
+export * from "./counterColorSchema";
 export * from "./fontSystem";
 export * from "./radius";
 export * from "./spacing";
+export * from "./stopwatchColorSchema";

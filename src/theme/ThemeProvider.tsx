@@ -1,7 +1,7 @@
 import { ThemeProvider as MuiThemeProvider, CssBaseline, } from "@mui/material";
 import { createTheme, ThemeOptions } from "@mui/material/styles";
 import { Brand, PaletteMode } from "@enum/index";
-import { CounterTheme } from "./modules";
+import { CounterTheme, StopwatchTheme } from "./modules";
 
 export interface ThemeProviderProps {
     brand: Brand;
@@ -15,7 +15,7 @@ export const BrandThemes = (brand: Brand, mode: PaletteMode): ThemeOptions => {
             return CounterTheme(mode);
 
         case Brand.STOPWATCH:
-            return CounterTheme(mode);
+            return StopwatchTheme(mode);
 
         default:
             return CounterTheme(mode);

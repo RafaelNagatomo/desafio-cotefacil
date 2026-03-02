@@ -1,14 +1,14 @@
 import { ColorSchema } from "../interfaces";
 
-export const colorSchema: ColorSchema = {
+export const stopwatchColorSchema: ColorSchema = {
     brand: {
         primary: {
-            100: "#9575cd",
-            200: "#7e57c2",
-            300: "#673ab7",
-            400: "#5e35b1",
-            500: "#4527a0",
-            600: "#311b92",
+            100: "#81c784",
+            200: "#66bb6a",
+            300: "#4caf50",
+            400: "#43a047",
+            500: "#2e7d32",
+            600: "#1b5e20",
         },
 
         secondary: {
@@ -61,12 +61,12 @@ export const colorSchema: ColorSchema = {
         },
 
         success: {
-            100: "#81c784",
-            200: "#66bb6a",
-            300: "#4caf50",
-            400: "#43a047",
-            500: "#2e7d32",
-            600: "#1b5e20",
+            100: "#9575cd",
+            200: "#7e57c2",
+            300: "#673ab7",
+            400: "#5e35b1",
+            500: "#4527a0",
+            600: "#311b92",
         },
     },
 

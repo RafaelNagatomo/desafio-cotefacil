@@ -1,5 +1,4 @@
 import { Avatar, Box, Divider, useTheme } from "@mui/material"
-import { deepPurple } from "@mui/material/colors";
 import { BrushLineIcon, SelectIcon } from "@components/index";
 import { PaletteMode } from "@enum/index";
 import { ApplicationController, useAppSelector, useController } from "@core/index";
@@ -36,7 +35,7 @@ export const Header = () => {
                     iconButton={<BrushLineIcon size={22} />}
                 />
 
-                <Avatar sx={{ bgcolor: deepPurple[500] }}>OP</Avatar>
+                <Avatar sx={{ bgcolor: theme?.palette?.primary?.main }}>OP</Avatar>
             </Box>
 
         </Box>

@@ -1,9 +1,10 @@
 import { Dispatch, UnknownAction } from '@reduxjs/toolkit';
 import { Navigator } from '@common/index';
-import { BaseController } from '@core/index';
+import { ApplicationController } from '@core/index';
 import { CounterService, setValue } from '@counter/index';
+import { Brand } from '@enum/index';
 
-export class CounterController extends BaseController {
+export class CounterController extends ApplicationController {
     protected service: CounterService;
 
     constructor(
@@ -22,6 +23,7 @@ export class CounterController extends BaseController {
     public init(): void {
         const saved = this.service.getSavedValue();
         this.updateGlobalState(setValue(saved));
+        this.changeBrand(Brand.COUNTER);
     }
 
     public increment(currentValue: number): void {

@@ -1,9 +1,10 @@
 import { Dispatch, UnknownAction } from '@reduxjs/toolkit';
-import { BaseController } from '@core/index';
+import { ApplicationController } from '@core/index';
 import { Navigator } from '@common/index';
 import { setSeconds, setIsRunning, resetStopwatch, StopwatchService } from '@stopwatch/index';
+import { Brand } from '@enum/brand';
 
-export class StopwatchController extends BaseController {
+export class StopwatchController extends ApplicationController {
     protected service: StopwatchService;
     private timerId: number | null = null;
     private startTime: number = 0;
@@ -21,6 +22,7 @@ export class StopwatchController extends BaseController {
 
     public init(): void {
         console.log("StopwatchController: Pronto.");
+        this.changeBrand(Brand.STOPWATCH);
     }
 
     protected registerEventBind(): void {
