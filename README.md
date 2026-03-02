@@ -107,6 +107,6 @@ npm run dev
 
 ## Screenshots
 
-![Screenshot preview light mode](./assets/preview_light.png)
+![Screenshot preview light mode](./public/assets/preview_light.png)
 
-![Screenshot preview dark mode](./assets/preview_dark.png)
+![Screenshot preview dark mode](./public/assets/preview_dark.png)
