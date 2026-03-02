@@ -16,8 +16,8 @@ export const Display = (props: DisplayProps) => {
                 className="drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]"
                 sx={{
                     color: (theme) => controller?.evenNumber(count)
-                    ? theme?.palette?.information?.default
-                    : theme?.palette?.surface?.inverse,
+                    ? theme?.palette?.secondary?.main
+                    : theme?.palette?.surface?.textPrimary,
                 }}
             >
                 {count}

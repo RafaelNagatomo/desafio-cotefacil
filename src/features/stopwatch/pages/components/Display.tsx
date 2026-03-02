@@ -13,7 +13,7 @@ export const Display = (props: DisplayProps) => {
         <Typography
             variant="h1"
             className="tracking-widest drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]"
-            sx={{ color: (theme) => theme?.palette?.information?.default }}
+            sx={{ color: (theme) => theme?.palette?.secondary?.main }}
         >
             {controller.formatTime(seconds)}
         </Typography>

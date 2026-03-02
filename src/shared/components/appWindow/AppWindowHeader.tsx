@@ -19,7 +19,7 @@ export const AppWindowHeader = (props: GridProps) => {
 
     return (
         <WindowHeader {...others}>
-            <Typography variant="body1" color={theme?.palette?.surface?.inverse}>
+            <Typography variant="body1" color={theme?.palette?.surface?.textPrimary}>
                 StopwatchCounter - {controller?.getPath().toUpperCase()}
             </Typography>
         </WindowHeader>

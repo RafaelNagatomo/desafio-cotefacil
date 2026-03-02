@@ -8,7 +8,7 @@ const WindowPaper = styled(Paper)(({ theme }) => ({
     flexDirection: 'column',
     width: "1200px",
     height: "680px",
-    backgroundColor: theme?.palette?.surface?.onMuted,
+    backgroundColor: theme?.palette?.surface?.surface,
     borderRadius: theme?.radius?.l,
 }));
 
@@ -16,7 +16,7 @@ const ElasticContainer = styled(Box)(({ theme }) => ({
     flex: '1',
     alignContent: 'center',
     overflow: 'hidden',
-    backgroundColor: theme?.palette?.surface?.onInverse,
+    backgroundColor: theme?.palette?.surface?.surfaceVariant,
 }));
 
 export const AppWindow = (props: PaperProps) => {
@@ -28,7 +28,7 @@ export const AppWindow = (props: PaperProps) => {
             <Divider
                 sx={(theme) => ({
                     borderBottomWidth: 2,
-                    borderColor: theme?.palette?.fixed?.dark,
+                    borderColor: theme?.palette?.surface?.divider,
                 })}
             />
 

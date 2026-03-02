@@ -12,18 +12,18 @@ import { ActionButtonType } from '@enum/index';
 export const BaseButton = styled(Button)(({ theme }) => ({
     paddingTop: theme?.customSpacing?.xs,
     paddingBottom: theme?.customSpacing?.xs,
-    color: theme?.palette?.surface?.inverse,
+    color: theme?.palette?.surface?.textPrimary,
     borderRadius: theme?.radius?.m,
     textTransform: 'none',
     fontSize: 16,
 
     "&:hover": {
-        backgroundColor: theme?.palette?.surface?.hover,
+        backgroundColor: theme?.palette?.primary?.hover,
     },
 
     "&:disabled": {
-        backgroundColor: theme?.palette?.surface?.default,
-        color: theme?.palette?.surface?.main,
+        backgroundColor: theme?.palette?.disabled?.default,
+        color: theme?.palette?.disabled?.onDefault,
         cursor: "not-allowed",
         border: "none",
         pointerEvents: "none",
@@ -61,7 +61,11 @@ export const TextButton = (props: ActionButtonProps) => {
             onClick={onClick}
             disableFocusRipple
             disabled={disabled}
-            sx={sx}
+            sx={(theme) => ({
+                "&:hover": {
+                    color: theme?.palette?.fixed?.light,
+                },
+            })}
             {...others}
         >
             {label}
@@ -80,7 +84,8 @@ export const ContainedButton = (props: ActionButtonProps) => {
             disableFocusRipple
             disabled={disabled}
             sx={(theme: Theme) => ({
-                backgroundColor: theme?.palette?.surface?.default,
+                backgroundColor: theme?.palette?.primary?.main,
+                color: theme?.palette?.fixed?.light,
                 sx,
             })}
             {...others}
@@ -101,7 +106,10 @@ export const OutlinedButton = (props: ActionButtonProps) => {
             disableFocusRipple
             disabled={disabled}
             sx={(theme: Theme) => ({
-                borderColor: theme?.palette?.surface?.default,
+                borderColor: theme?.palette?.primary?.main,
+                "&:hover": {
+                    color: theme?.palette?.fixed?.light,
+                },
                 sx,
             })}
             {...others}
@@ -121,16 +129,16 @@ export const RoundedButton = (props: ActionButtonProps) => {
                 size="large"
                 onClick={onClick}
                 sx={(theme: Theme) => ({
-                    backgroundColor: theme?.palette?.surface?.default,
-                    color: theme?.palette?.surface?.inverse,
+                    color: theme?.palette?.surface?.textPrimary,
 
                     "&:hover": {
-                        backgroundColor: theme?.palette?.surface?.hover,
+                        backgroundColor: theme?.palette?.primary?.hover,
+                        color: theme?.palette?.fixed?.light,
                     },
 
                     "&:disabled": {
-                        backgroundColor: theme?.palette?.surface?.default,
-                        color: theme?.palette?.surface?.main,
+                        backgroundColor: theme?.palette?.disabled?.default,
+                        color: theme?.palette?.disabled?.onDefault,
                         cursor: "not-allowed",
                         border: "none",
                         pointerEvents: "none",

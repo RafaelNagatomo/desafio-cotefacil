@@ -13,7 +13,7 @@ export const ClockPage: React.FC = () => {
                 <Typography
                     variant="h5"
                     className="font-bold"
-                    sx={{ color: (theme) => theme?.palette?.surface?.inverse }}
+                    sx={{ color: (theme) => theme?.palette?.surface?.textPrimary }}
                 >
                     Hora atual do sistema
                 </Typography>
@@ -21,7 +21,7 @@ export const ClockPage: React.FC = () => {
                 <Typography 
                     variant="h1" 
                     className="tracking-widest drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]"
-                    sx={{ color: (theme) => theme?.palette?.information?.default }}
+                    sx={{ color: (theme) => theme?.palette?.secondary?.main }}
                 >
                     {currentTime}
                 </Typography>

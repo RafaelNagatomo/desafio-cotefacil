@@ -42,7 +42,7 @@ export const ButtonBox = (props: ButtonBoxProps) => {
 
                 <ActionButton
                     icon={<RefreshIcon />}
-                    actionType={ActionButtonType.TEXT}
+                    actionType={ActionButtonType.OUTLINED}
                     label="Resetar"
                     visible={true}
                     disabled={false}
@@ -55,8 +55,8 @@ export const ButtonBox = (props: ButtonBoxProps) => {
 
                 <Typography
                     variant="caption"
-                    className="uppercase tracking-widest opacity-40 font-bold"
-                    sx={{ color: (theme) => theme?.palette?.surface?.inverse }}
+                    className="uppercase tracking-widest font-bold"
+                    sx={{ color: (theme) => theme?.palette?.surface?.textPrimary }}
                 >
                     {isRunning ? "Sistema em andamento" : "Sistema pausado"}
                 </Typography>
