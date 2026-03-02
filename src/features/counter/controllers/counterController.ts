@@ -15,13 +15,13 @@ export class CounterController extends BaseController {
     }
 
     private updateState(newValue: number): void {
-        this._dispatch(setValue(newValue));
+        this.updateGlobalState(setValue(newValue));
         this.service.saveValue(newValue);
     }
 
     public init(): void {
         const saved = this.service.getSavedValue();
-        this._dispatch(setValue(saved));
+        this.updateGlobalState(setValue(saved));
     }
 
     public increment(currentValue: number): void {

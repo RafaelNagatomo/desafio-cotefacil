@@ -1,8 +1,13 @@
-import { Avatar, Box, Button, Divider, useTheme } from "@mui/material"
+import { Avatar, Box, Divider, useTheme } from "@mui/material"
 import { deepPurple } from "@mui/material/colors";
+import { BrushLineIcon, SelectIcon } from "@components/index";
+import { ApplicationController, useAppSelector, useController } from "@core/index";
+import { PaletteMode } from "@theme/core/interfaces";
 
 export const Header = () => {
-  const theme = useTheme();
+    const theme = useTheme();
+    const controller = useController(ApplicationController);
+    const { currentMode } = useAppSelector(state => state.appConfig);
 
   return (
     <>
@@ -23,12 +28,14 @@ export const Header = () => {
                 alignItems="center"
                 gap={theme?.customSpacing?.s}
             >
-                <Button
-                    variant="outlined"
-                    onClick={() => alert("Button header")}
-                >
-                    Theme
-                </Button>
+                <SelectIcon 
+                    tooltip="Escolha um tema"
+                    value={currentMode}
+                    items={controller.getThemeOptions()}
+                    onChange={(value) => controller.changeThemeMode(value as PaletteMode)}
+                    iconButton={<BrushLineIcon size={22} />}
+                />
+
                 <Avatar sx={{ bgcolor: deepPurple[500] }}>OP</Avatar>
             </Box>
 

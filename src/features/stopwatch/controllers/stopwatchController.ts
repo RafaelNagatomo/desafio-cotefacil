@@ -39,7 +39,7 @@ export class StopwatchController extends BaseController {
         this.accumulatedTime = currentSeconds;
         this.startTime = Date.now();
         
-        this._dispatch(setIsRunning(true));
+        this.updateGlobalState(setIsRunning(true));
         this.nextTick();
     }
 
@@ -64,7 +64,7 @@ export class StopwatchController extends BaseController {
         const elapsedSeconds = Math.floor((Date.now() - this.startTime) / 1000);
         const totalSeconds = this.accumulatedTime + elapsedSeconds;
 
-        this._dispatch(setSeconds(totalSeconds));
+        this.updateGlobalState(setSeconds(totalSeconds));
         this.nextTick();
     }
 
@@ -74,7 +74,7 @@ export class StopwatchController extends BaseController {
         this.accumulatedTime = this.calculateCurrentTotal();
         this.clearTimer();
 
-        this._dispatch(setIsRunning(false));
+        this.updateGlobalState(setIsRunning(false));
     }
 
     private calculateCurrentTotal(): number {
@@ -88,7 +88,7 @@ export class StopwatchController extends BaseController {
         this.accumulatedTime = 0;
         this.startTime = 0;
 
-        this._dispatch(resetStopwatch());
+        this.updateGlobalState(resetStopwatch());
     }
 
     public dispose(): void {

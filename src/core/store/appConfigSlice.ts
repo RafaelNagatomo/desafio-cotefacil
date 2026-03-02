@@ -1,25 +1,32 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { PaletteMode } from '@theme/core/interfaces';
+import { Brand } from '@theme/index';
 
 interface AppConfigState {
-    currentMode: 'counter' | 'stopwatch';
+    brand: Brand;
+    currentMode: PaletteMode;
 }
 
 const initialState: AppConfigState = {
-    currentMode: 'counter',
+    brand: Brand.COUNTER,
+    currentMode: PaletteMode.LIGHT,
 };
 
 const appConfigSlice = createSlice({
     name: 'appConfig',
     initialState,
     reducers: {
-        setMode: (state, action: PayloadAction<'counter' | 'stopwatch'>) => {
+        setBrand: (state, action: PayloadAction<Brand>) => {
+            state.brand = action.payload;
+        },
+        setThemeMode: (state, action: PayloadAction<PaletteMode>) => {
             state.currentMode = action.payload;
         },
-        toggleMode: (state) => {
-            state.currentMode = state.currentMode === 'counter' ? 'stopwatch' : 'counter';
+        toggleThemeMode: (state) => {
+            state.currentMode = state.currentMode === PaletteMode.LIGHT ? PaletteMode.DARK : PaletteMode.LIGHT;
         },
     },
 });
 
-export const { setMode, toggleMode } = appConfigSlice.actions;
+export const { setBrand, setThemeMode, toggleThemeMode } = appConfigSlice.actions;
 export default appConfigSlice.reducer;

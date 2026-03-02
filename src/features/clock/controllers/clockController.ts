@@ -3,6 +3,7 @@ import { BaseController } from "@core/index";
 
 export class ClockController extends BaseController {
     private timerId: number | null = null;
+    private readonly ONE_SECOND = 1000;
 
     protected registerEventBind(): void {
         super.registerEventBind();
@@ -19,7 +20,7 @@ export class ClockController extends BaseController {
         const formatted = now.toLocaleTimeString('pt-BR');
 
         this._dispatch(setTime(formatted));
-        this.timerId = window.setTimeout(this.tick, 1000);
+        this.timerId = window.setTimeout(this.tick, this.ONE_SECOND);
     }
 
     public dispose(): void {

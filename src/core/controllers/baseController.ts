@@ -1,5 +1,5 @@
 import { Dispatch, UnknownAction } from '@reduxjs/toolkit';
-import { IController } from '@core/interfaces/IController';
+import { IController } from '@core/index';
 import { Constants, Navigator } from '@common/index';
 
 export abstract class BaseController implements IController {

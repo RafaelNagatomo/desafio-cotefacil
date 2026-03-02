@@ -1,16 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { createTheme, Theme, ThemeOptions } from "@mui/material";
 import { PaletteSchema } from "./interfaces";
-import { boxShadow, colorSchema, fontSystem, radius, spacing } from "./tokens";
-import { LightPalette } from "./palettes";
+import { boxShadow, fontSystem, radius, spacing } from "./tokens";
 
 export class ThemeFactory {
     private readonly palette: PaletteSchema;
     private spacingOverrides: any;
     private radiusOverrides: any;
 
-    constructor(palette?: PaletteSchema) {
-        this.palette = palette ?? LightPalette(colorSchema);
+    constructor(palette: PaletteSchema) {
+        this.palette = palette;
     }
 
     public overrideSpacingTokens(overrides: any) {

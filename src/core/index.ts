@@ -1,4 +1,5 @@
-export * from './controllers/baseController'
+export { BaseController } from './controllers/baseController'
+export { ApplicationController } from './controllers/applicationController'
 export * from './hooks/reduxHooks'
 export * from './hooks/useController'
 export * from './interfaces/IController'

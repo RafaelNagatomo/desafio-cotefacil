@@ -14,6 +14,8 @@ import { TbDatabaseX as CancelIcon } from "react-icons/tb";
 import { GrRefresh as RefreshIcon } from "react-icons/gr";
 import { FaPlay as PlayIcon } from "react-icons/fa";
 import { FaPause as PauseIcon } from "react-icons/fa";
+import { FaCheck as CheckIcon } from "react-icons/fa";
+import { RiBrushAiLine as BrushLineIcon } from "react-icons/ri";
 
 export {
     NewIcon,
@@ -23,6 +25,8 @@ export {
     RefreshIcon,
     PlayIcon,
     PauseIcon,
+    CheckIcon,
+    BrushLineIcon,
 };
 
 export const ActionButton = (props: ActionButtonProps) => {

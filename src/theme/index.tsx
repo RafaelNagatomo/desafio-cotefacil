@@ -1,6 +1,7 @@
 import { ThemeProvider as MuiThemeProvider, CssBaseline, } from "@mui/material";
-import { ThemeOptions } from "@mui/material/styles";
+import { createTheme, ThemeOptions } from "@mui/material/styles";
 import { CounterTheme } from "./modules/counter";
+import { PaletteMode } from "./core/interfaces";
 
 export enum Brand {
     COUNTER = "COUNTER",
@@ -9,27 +10,28 @@ export enum Brand {
 
 interface ThemeProviderProps {
     brand: Brand;
+    mode: PaletteMode;
     children: React.ReactNode;
 }
 
-export const BrandThemes = (brand: Brand): ThemeOptions => {
+export const BrandThemes = (brand: Brand, mode: PaletteMode): ThemeOptions => {
     switch (brand) {
         case Brand.COUNTER:
-            return CounterTheme();
+            return CounterTheme(mode);
 
         case Brand.STOPWATCH:
-            return CounterTheme();
+            return CounterTheme(mode);
 
         default:
-            return CounterTheme();
+            return CounterTheme(mode);
     }
 };
 
 export const ThemeProvider = (props: ThemeProviderProps) => {
-    const { brand, children } = props;
+    const { brand, mode, children } = props;
 
     return (
-        <MuiThemeProvider theme={BrandThemes(brand)} >
+        <MuiThemeProvider theme={createTheme(BrandThemes(brand, mode))} >
             <CssBaseline />
             { children }
         </MuiThemeProvider>
