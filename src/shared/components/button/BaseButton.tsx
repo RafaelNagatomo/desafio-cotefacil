@@ -1,4 +1,13 @@
-import { Button, ButtonProps, IconButton, styled, SxProps, Theme, Tooltip } from '@mui/material'
+import {
+    Button,
+    ButtonProps,
+    IconButton,
+    styled,
+    SxProps,
+    Theme,
+    Tooltip
+} from '@mui/material'
+import { ActionButtonType } from '@enum/index';
 
 export const BaseButton = styled(Button)(({ theme }) => ({
     paddingTop: theme?.customSpacing?.xs,
@@ -31,13 +40,6 @@ export const BaseButton = styled(Button)(({ theme }) => ({
         borderRadius: `calc(${theme?.radius?.m} + 3px)`,
     },
 }));
-
-export enum ActionButtonType {
-    TEXT = 'TEXT',
-    OUTLINED = 'OUTLINED',
-    CONTAINED = 'CONTAINED',
-    ROUNDED = 'ROUNDED',
-}
 
 export interface ActionButtonProps extends ButtonProps {
     icon?: React.ReactNode;

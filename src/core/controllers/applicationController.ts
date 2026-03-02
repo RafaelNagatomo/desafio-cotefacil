@@ -1,6 +1,5 @@
 import { BaseController, setBrand, setThemeMode } from "@core/index";
-import { Brand } from "@theme/index";
-import { PaletteMode } from "@theme/core/interfaces";
+import { Brand, PaletteMode } from "@enum/index";
 
 export class ApplicationController extends BaseController {
     public getThemeOptions() {

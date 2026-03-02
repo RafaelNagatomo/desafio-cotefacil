@@ -1,11 +1,11 @@
 import {
     ActionButtonProps,
-    ActionButtonType,
     ContainedButton,
     OutlinedButton,
     RoundedButton,
     TextButton,
 } from "./BaseButton";
+import { ActionButtonType } from "@enum/index";
 
 import { CiSquarePlus as NewIcon } from "react-icons/ci";
 import { TbEdit as EditIcon } from 'react-icons/tb';

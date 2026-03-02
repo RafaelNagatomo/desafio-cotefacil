@@ -1,11 +1,11 @@
 import { Box, Typography } from "@mui/material";
 import {
     ActionButton,
-    ActionButtonType,
     PauseIcon,
     PlayIcon, 
     RefreshIcon,
 } from "@components/index";
+import { ActionButtonType } from "@enum/index";
 import { StopwatchController } from "@stopwatch/index";
 
 interface ButtonBoxProps {

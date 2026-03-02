@@ -1,12 +1,7 @@
 import { ThemeProvider as MuiThemeProvider, CssBaseline, } from "@mui/material";
 import { createTheme, ThemeOptions } from "@mui/material/styles";
 import { CounterTheme } from "./modules/counter";
-import { PaletteMode } from "./core/interfaces";
-
-export enum Brand {
-    COUNTER = "COUNTER",
-    STOPWATCH = "STOPWATCH",
-}
+import { Brand, PaletteMode } from "@enum/index";
 
 interface ThemeProviderProps {
     brand: Brand;

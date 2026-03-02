@@ -1,5 +1,6 @@
 import { Box, GridProps, Stack, styled } from '@mui/material';
-import { ActionButton, ActionButtonType } from '@components/index';
+import { ActionButton } from '@components/index';
+import { ActionButtonType, MenuUrl } from '@enum/index';
 import { useController } from '@core/index';
 import { CounterController } from '@counter/index';
 
@@ -9,12 +10,6 @@ const WindowMenu = styled(Box)(({ theme }) => ({
     padding: theme?.customSpacing?.m,
     borderRadius: `${theme?.radius?.l} ${theme?.radius?.l} 0 0`,
 }));
-
-export enum MenuUrl {
-    COUNTER = 'counter',
-    STOPWATCH = 'stopwatch',
-    CLOCK = 'clock',
-}
 
 export const AppWindowMenu = (props: GridProps) => {
     const { children, sx, ...others } = props;

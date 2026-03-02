@@ -1,10 +1,9 @@
-import { ColorSchema, PaletteMode, PaletteSchema } from "../interfaces";
+import { ColorSchema, PaletteSchema } from "../interfaces";
 
 export const DarkPalette = (tokens: ColorSchema): PaletteSchema => {
     const c = tokens;
 
     return {
-        mode: PaletteMode.DARK,
         primary: {
             main: c.brand?.primary[400],
             default: c.brand?.primary[200],

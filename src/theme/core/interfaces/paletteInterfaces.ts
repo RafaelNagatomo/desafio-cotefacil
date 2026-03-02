@@ -1,8 +1,3 @@
-export enum PaletteMode {
-    LIGHT = 'light',
-    DARK = 'dark',
-}
-
 export interface DisabledPalette {
     default?: string;
     onDefault?: string;
@@ -25,7 +20,6 @@ export interface BrandPalette {
 }
 
 export interface PaletteSchema {
-    mode: PaletteMode;
     primary: BrandPalette;
     secondary: BrandPalette;
     surface: BrandPalette;

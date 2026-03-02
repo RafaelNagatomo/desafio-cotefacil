@@ -1,6 +1,5 @@
+import { Brand, PaletteMode } from '@enum/index';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { PaletteMode } from '@theme/core/interfaces';
-import { Brand } from '@theme/index';
 
 interface AppConfigState {
     brand: Brand;

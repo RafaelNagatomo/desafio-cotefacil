@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
-import { ActionButton, ActionButtonType, NewIcon, RefreshIcon } from "@components/index";
+import { ActionButton, NewIcon, RefreshIcon } from "@components/index";
+import { ActionButtonType } from "@enum/index";
 import { CounterController } from "@counter/index";
 
 interface ButtonBoxProps {

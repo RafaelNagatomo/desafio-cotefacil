@@ -12,7 +12,7 @@
       "@routes/*": ["./src/routes/*"],
       "@common/*": ["./src/shared/common/*"],
       "@components/*": ["./src/shared/components/*"],
-      "@hooks/*": ["./src/shared/hooks/*"],
+      "@enum/*": ["./src/shared/enum/*"],
       "@theme/*": ["./src/theme/*"],
 
       /* Features */
