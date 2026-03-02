@@ -1,5 +1,5 @@
 import { Box, GridProps, Stack, styled } from '@mui/material';
-import { ActionButton, ActionButtonType } from '@components/button';
+import { ActionButton, ActionButtonType } from '@components/index';
 import { useController } from '@core/index';
 import { CounterController } from '@counter/index';
 

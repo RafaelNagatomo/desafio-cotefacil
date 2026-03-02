@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { AppWindow } from "@components/appWindow";
+import { AppWindow } from "@components/index";
 import { useController, useAppSelector } from "@core/index";
 import { CounterController } from "@counter/index";
 

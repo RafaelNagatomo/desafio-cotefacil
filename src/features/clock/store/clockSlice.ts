@@ -1,21 +1,21 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface ClockState {
-  currentTime: string;
+    currentTime: string;
 }
 
 const initialState: ClockState = {
-  currentTime: '--:--:--',
+    currentTime: '--:--:--',
 };
 
 const clockSlice = createSlice({
-  name: 'clock',
-  initialState,
-  reducers: {
-    setTime: (state, action: PayloadAction<string>) => {
-      state.currentTime = action.payload;
+    name: 'clock',
+    initialState,
+    reducers: {
+        setTime: (state, action: PayloadAction<string>) => {
+            state.currentTime = action.payload;
+        },
     },
-  },
 });
 
 export const { setTime } = clockSlice.actions;

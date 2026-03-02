@@ -2,7 +2,7 @@ import { useEffect, useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import { Dispatch, UnknownAction } from '@reduxjs/toolkit';
 
-import { Navigator, useNavigation } from '@common/navigation';
+import { Navigator, useNavigation } from '@common/index';
 import { BaseController } from '@core/index';
 
 export function useController<T extends BaseController>(

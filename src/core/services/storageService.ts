@@ -1,4 +1,4 @@
-import { IStorePersist } from "@core/interfaces/IStorePersist";
+import { IStorePersist } from "@core/index";
 
 export class StorageService implements IStorePersist {
     public set(key: string, value: any): void {

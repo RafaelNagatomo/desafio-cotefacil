@@ -1,7 +1,8 @@
 import { Box } from "@mui/material";
-import { AppWindow } from "@components/appWindow";
+import { AppWindow } from "@components/index";
 import { useAppSelector, useController } from "@core/index";
 import { StopwatchController } from "@stopwatch/index";
+
 import { Display } from "./components/Display";
 import { ButtonBox } from "./components/ButtonBox";
 

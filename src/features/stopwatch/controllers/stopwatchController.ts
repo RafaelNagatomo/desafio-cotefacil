@@ -1,6 +1,6 @@
 import { Dispatch, UnknownAction } from '@reduxjs/toolkit';
 import { BaseController } from '@core/index';
-import { Navigator } from '@common/navigation';
+import { Navigator } from '@common/index';
 import { setSeconds, setIsRunning, resetStopwatch, StopwatchService } from '@stopwatch/index';
 
 export class StopwatchController extends BaseController {

@@ -1,10 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { useTheme } from "@mui/material";
-import {
-    MasterBody,
-    MasterContainer,
-    MasterHeader,
-} from "@components/container";
+import { MasterBody, MasterContainer, MasterHeader } from "@components/index";
 
 import { Header } from "./Header";
 import { Footer } from "./Footer";

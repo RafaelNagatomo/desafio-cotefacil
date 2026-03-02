@@ -1,7 +1,6 @@
 import { Dispatch, UnknownAction } from '@reduxjs/toolkit';
 import { IController } from '@core/interfaces/IController';
-import { Constants } from '@common/constants';
-import { Navigator } from '@common/navigation';
+import { Constants, Navigator } from '@common/index';
 
 export abstract class BaseController implements IController {
     protected _navigate: Navigator;

@@ -5,7 +5,7 @@ import {
     PauseIcon,
     PlayIcon, 
     RefreshIcon,
-} from "@components/button";
+} from "@components/index";
 import { StopwatchController } from "@stopwatch/index";
 
 interface ButtonBoxProps {

@@ -1,9 +1,10 @@
 import { Navigate, RouteObject } from "react-router-dom"
-import { Constants } from "@common/constants"
+import { Constants } from "@common/index"
 import { AppLayout } from "@components/index"
+
 import { CounterPage } from "@counter/index"
 import { StopwatchPage } from "@stopwatch/index"
-import { ClockPage } from "../features/clock"
+import { ClockPage } from "@clock/index"
 
 export const AppRoutes: RouteObject = {
     path: "/app",

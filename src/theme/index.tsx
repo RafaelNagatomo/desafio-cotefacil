@@ -1,6 +1,6 @@
 import { ThemeProvider as MuiThemeProvider, CssBaseline, } from "@mui/material";
-import { CounterTheme } from "./modules/counter";
 import { ThemeOptions } from "@mui/material/styles";
+import { CounterTheme } from "./modules/counter";
 
 export enum Brand {
     COUNTER = "COUNTER",

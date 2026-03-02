@@ -1,5 +1,5 @@
 import { Navigate, useRoutes } from "react-router-dom"
-import { Constants } from "@common/constants"
+import { Constants } from "@common/index"
 import { AppRoutes } from "./AppRoutes"
 
 export const MainRoutes = () => {

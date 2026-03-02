@@ -1,8 +1,7 @@
 import { Box, Typography } from '@mui/material';
-import { useController } from '../../../core/hooks/useController';
-import { ClockController } from '../controllers/clockController';
-import { AppWindow } from '@components/appWindow';
-import { useAppSelector } from '@core/index';
+import { AppWindow } from '@components/index';
+import { useAppSelector, useController } from '@core/index';
+import { ClockController } from '@clock/index';
 
 export const ClockPage: React.FC = () => {
     useController(ClockController);
